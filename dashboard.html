@@ -1,322 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="style/style.css">
-    <title>Dashboard | SafePAY</title>
+  <title>Dashboard | Safepay</title>
 </head>
 <body>
-    <section>
-        <div class="container">
-            <div class="d-flex align-items-start">
-                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                  <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Dashboard</button>
-                  <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Overview</button>
-                  <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Transactions</button>
-                  <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Payouts</button>
-                  <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-message" type="button" role="tab" aria-controls="v-pills-message" aria-selected="false">Settings</button>
-                  <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Personal Info</button>
-                  <button class="nav-link" id="v-pills-message-tab" data-bs-toggle="pill" data-bs-target="#v-pills-message" type="button" role="tab" aria-controls="v-pills-message" aria-selected="false">Buisness Info</button>
-                  <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Payment Setup</button>
-                </div>
-                <div class="tab-content" id="v-pills-tabContent">
-                    <!-- start of first pill -->
-                  <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                    <div class="alert alert-warning" role="alert">
-                        Dashboard/Overview
-                    </div>
-                    <div class="dashright">
-                        <div class="row">
-                            <div class="col-4">
-                                <label for="start date">Start Date:</label>
-                                <input type="date" id="start" name="trip-start"
-                                value="Start date" placeholder="Start date"
-                                min="" max="">
-                            </div>
-                            <div class="col-4">
-                                <label for="end date">End Date:</label>
-                                <input type="date" id="start" name="trip-start"
-                                value="Start date" placeholder="Start date"
-                                min="" max="">
-                            </div>
-                            <div class="col-4">
-                                <button type="button" class="btn btn-warning">
-                                    Total value <span class="badge bg-secondary">N2,000,500 </span>
-                                  </button>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                  <!-- first pill ends -->
+  <header>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" style="color: #ff9100;">SafePAY logo</a>
+          <form class="d-flex">
+            <input class="form-control sp" type="email" placeholder="email" aria-label="default input example">
+            <input class="form-control sp" type="text" placeholder="password" aria-label="default input example">
+            <button type="button" class="btn btn-outline-warning sp">Login</button>
+            <button type="button" class="btn btn-outline-warning sp">Signup</button>
 
-                  <!-- second pill starts -->
-                  <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                    <!-- this is empty for now copy what is in dashboard-->
-                  </div>
-                  <!-- second pill ends -->
-
-                  <!-- third pill starts -->
-                  <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-                    <div class="row">
-                        <div class="col-3">
-                            <label for="start date">Start date:</label>
-                            <input type="date" id="start" name="start date">
-                        </div>
-                        <div class="col-3">
-                            <label for="end date">End date:</label>
-                            <input type="date" id="end" name="end date">
-                        </div>
-                        <div class="col-3">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Select Channel</option>
-                                <option value="1">Paystack</option>
-                                <option value="2">ATM</option>
-                                <option value="3">Debit Card</option>
-                                <option value="3">Bank Transfer</option>
-                                <option value="3">USSD</option>
-                            </select>
-                        </div>
-                        <div class="col-3">
-                            <button type="button" class="btn btn-warning">Download Report</button>
-                        </div>
-                    </div>
-                    <table class="table table-bordered border-warning">
-                        <thead>
-                            <tr>
-                              <th scope="col">Amount</th>
-                              <th scope="col">Description</th>
-                              <th scope="col">Channel</th>
-                              <th scope="col">Date</th>
-                              <th scope="col">Status</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <th scope="row">value2</th>
-                              <td>value1</td>
-                              <td>value12</td>
-                              <td>value2</td>
-                              <td>value3</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">value4</th>
-                              <td>value2</td>
-                              <td>value7</td>
-                              <td>value19</td>
-                              <td>value0</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">value3</th>
-                              <td>value5</td>
-                              <td>value7</td>
-                              <td>value2</td>
-                              <td>value7</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">value2</th>
-                                <td>value1</td>
-                                <td>value12</td>
-                                <td>value2</td>
-                                <td>value3</td>
-                              </tr>
-                          </tbody>
-                    </table>
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination">
-                          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                          <li class="page-item"><a class="page-link" href="#">1</a></li>
-                          <li class="page-item"><a class="page-link" href="#">2</a></li>
-                          <li class="page-item"><a class="page-link" href="#">3</a></li>
-                          <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                        </ul>
-                    </nav>
-                  </div>
-                  <!-- third pill ends -->
-
-                  <!-- start of fouth pill -->
-                  <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
-                    <div class="row">
-                        <div class="col-3">
-                            <label for="start date">Start date:</label>
-                            <input type="date" id="start" name="start date">
-                        </div>
-                        <div class="col-3">
-                            <label for="end date">End date:</label>
-                            <input type="date" id="end" name="end date">
-                        </div>
-                        <div class="col-3">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Select Status</option>
-                                <option value="1">Paid</option>
-                                <option value="2">Pending</option>
-                                <option value="3">Recieved</option>
-                                <option value="3">Not Recieved</option>
-                                <option value="3">USSD</option>
-                            </select>
-                        </div>
-                        <div class="col-3">
-                            <button type="button" class="btn btn-warning">Download Report</button>
-                        </div>
-                    </div>
-                    <table class="table table-bordered border-warning">
-                        <thead>
-                            <tr>
-                              <th scope="col">Amount</th>
-                              <th scope="col">Description</th>
-                              <th scope="col">Paid To</th>
-                              <th scope="col">Date</th>
-                              <th scope="col">Status</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <th scope="row">value2</th>
-                              <td>value1</td>
-                              <td>value12</td>
-                              <td>value2</td>
-                              <td>value3</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">value4</th>
-                              <td>value2</td>
-                              <td>value7</td>
-                              <td>value19</td>
-                              <td>value0</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">value3</th>
-                              <td>value5</td>
-                              <td>value7</td>
-                              <td>value2</td>
-                              <td>value7</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">value2</th>
-                                <td>value1</td>
-                                <td>value12</td>
-                                <td>value2</td>
-                                <td>value3</td>
-                              </tr>
-                          </tbody>
-                    </table>
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination">
-                          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                          <li class="page-item"><a class="page-link" href="#">1</a></li>
-                          <li class="page-item"><a class="page-link" href="#">2</a></li>
-                          <li class="page-item"><a class="page-link" href="#">3</a></li>
-                          <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                        </ul>
-                    </nav>
-                  </div>
-                  <!-- fourth pill ends here -->
-
-                  <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                    <div class="alert alert-warning" role="alert">
-                        Settings / Personal Information
-                    </div>
-                    <div class="input-group">
-                        <span class="input-group-text">First and last name</span>
-                        <input type="text" aria-label="First name" class="form-control">
-                        <input type="text" aria-label="Last name" class="form-control">
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <input type="text" class="form-control" placeholder="First name" aria-label="First name">
-                        </div>
-                        <div class="col">
-                          <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col input-group mb-3">
-                            <span class="input-group-text" id="inputGroup-sizing-default">Password</span>
-                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                        </div>
-                        <div class="col input-group mb-3">
-                            <span class="input-group-text" id="inputGroup-sizing-default">Password again</span>
-                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                        </div>
-                      </div>
-                      <button type="button" class="btn btn-outline-warning">Save</button>
-
-                  </div>
-                  <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                    <div class="alert alert-warning" role="alert">
-                        Settings / Personal Information
-                    </div>
-                    <div class="input-group">
-                        <span class="input-group-text">First and last name</span>
-                        <input type="text" aria-label="First name" class="form-control">
-                        <input type="text" aria-label="Last name" class="form-control">
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <input type="text" class="form-control" placeholder="First name" aria-label="First name">
-                        </div>
-                        <div class="col">
-                          <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col input-group mb-3">
-                            <span class="input-group-text" id="inputGroup-sizing-default">Password</span>
-                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                        </div>
-                        <div class="col input-group mb-3">
-                            <span class="input-group-text" id="inputGroup-sizing-default">Password again</span>
-                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                        </div>
-                      </div>
-                      <button type="button" class="btn btn-outline-warning">Save</button>
-                  </div>
-
-                  <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-                      <div class="row">
-                      <div class="alert alert-warning" role="alert">
-                         Settings / Business Information
-                      </div>
-                          <div class="col-6">
-                              <form action="/">
-                                <input class="form-control" type="text" placeholder="Enter the name of your business" aria-label="default input example">
-                                <input class="form-control" type="text" placeholder="Enter the business email address" aria-label="default input example">
-                                <input class="form-control" type="text" placeholder="Enter the business phone number" aria-label="default input example">
-                                <input class="form-control form-control-lg" type="text" placeholder="Enter address of the business" aria-label=".form-control-lg example">
-                            </form>
-                          </div>
-                          <div class="col-6">
-                              <form action="/">
-                                <div class="form-check form-check-inline">Is your buisness registered with CAC?
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                    <label class="form-check-label" for="inlineCheckbox1">yes</label>
-                                  </div>
-                                  <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                                    <label class="form-check-label" for="inlineCheckbox2">no</label>
-                                  </div>
-                                  <div class="input-group mb-3">
-                                    <input type="file" class="form-control" id="inputGroupFile02" placeholder="Upload registration document">
-                                    <label class="input-group-text" for="inputGroupFile02"></label>
-                                  </div>
-                                  <div class="input-group mb-3">
-                                    <input type="file" class="form-control" id="inputGroupFile02">
-                                    <label class="input-group-text" for="inputGroupFile02"></label>
-                                  </div>
-                              </form>
-                          </div>
-                      </div>
-                  </div>
-                </div>
-              </div>
-
-              
-              
+        </form>
         </div>
+      </nav>
+  </header>
 
-    </section>
+  <div class="d-flex align-items-start container dash">
+    <div class="nav flex-column nav-pills me-3 list-group" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <button class=" active list-group-item" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Dashboard</button>
+      <button class=" list-group-item" id="v-pills-overview-tab" data-bs-toggle="pill" data-bs-target="#v-pills-overview" type="button" role="tab" aria-controls="v-pills-overview" aria-selected="false">Overview</button>
+      <button class=" list-group-item" id="v-pills-transaction-tab" data-bs-toggle="pill" data-bs-target="#v-pills-transaction" type="button" role="tab" aria-controls="v-pills-transaction" aria-selected="false">Transactions</button>
+      <button class=" list-group-item" id="v-pills-payout-tab" data-bs-toggle="pill" data-bs-target="#v-pills-payout" type="button" role="tab" aria-controls="v-pills-payout" aria-selected="false">Payouts</button>
+      <button class=" list-group-item" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</button>
+      <button class=" list-group-item" id="v-pills-info-tab" data-bs-toggle="pill" data-bs-target="#v-pills-info" type="button" role="tab" aria-controls="v-pills-info" aria-selected="false">Personal Info</button>
+      <button class=" list-group-item" id="v-pills-buisness-tab" data-bs-toggle="pill" data-bs-target="#v-pills-buisness" type="button" role="tab" aria-controls="v-pills-buisness" aria-selected="false">Buisness Info</button>
+      <button class=" list-group-item" id="v-pills-setup-tab" data-bs-toggle="pill" data-bs-target="#v-pills-setup" type="button" role="tab" aria-controls="v-pills-setup" aria-selected="false">Payment Setup</button>
+
+    </div>
+
+    <div class="tab-content" id="v-pills-tabContent">
+      <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+        <div class="alert alert-warning" role="alert">
+          Dashboard/Overview
+      </div>
+      <div class="dashright">
+          <div class="row">
+              <div class="col-4">
+                  <label for="start date">Start Date:</label>
+                  <input type="date" id="start" name="trip-start"
+                  value="Start date" placeholder="Start date"
+                  min="" max="">
+              </div>
+              <div class="col-4">
+                  <label for="end date">End Date:</label>
+                  <input type="date" id="start" name="trip-start"
+                  value="Start date" placeholder="Start date"
+                  min="" max="">
+              </div>
+              <div class="col-4">
+                  <button type="button" class="btn btn-warning">
+                      Total value <span class="badge bg-secondary">N2,000,500 </span>
+                    </button>
+              </div>
+          </div>
+      </div>
+      </div>
+      <div class="tab-pane fade" id="v-pills-overview" role="tabpanel" aria-labelledby="v-pills-overview-tab">
+        <div class="alert alert-warning" role="alert">
+          Dashboard/Overview
+      </div>
+      <div class="dashright">
+          <div class="row">
+              <div class="col-4">
+                  <label for="start date">Start Date:</label>
+                  <input type="date" id="start" name="trip-start"
+                  value="Start date" placeholder="Start date"
+                  min="" max="">
+              </div>
+              <div class="col-4">
+                  <label for="end date">End Date:</label>
+                  <input type="date" id="start" name="trip-start"
+                  value="Start date" placeholder="Start date"
+                  min="" max="">
+              </div>
+              <div class="col-4">
+                  <button type="button" class="btn btn-warning">
+                      Total value <span class="badge bg-secondary">N2,000,500 </span>
+                    </button>
+              </div>
+          </div>
+      </div>
+      </div>
+      <div class="tab-pane fade" id="v-pills-transaction" role="tabpanel" aria-labelledby="v-pills-transaction-tab">
+        <div class="row">
+          <div class="col-3">
+              <label for="start date">Start date:</label>
+              <input type="date" id="start" name="start date">
+          </div>
+          <div class="col-3">
+              <label for="end date">End date:</label>
+              <input type="date" id="end" name="end date">
+          </div>
+          <div class="col-3">
+              <select class="form-select" aria-label="Default select example">
+                  <option selected>Select Channel</option>
+                  <option value="1">Paystack</option>
+                  <option value="2">ATM</option>
+                  <option value="3">Debit Card</option>
+                  <option value="3">Bank Transfer</option>
+                  <option value="3">USSD</option>
+              </select>
+          </div>
+          <div class="col-3">
+              <button type="button" class="btn btn-warning">Download Report</button>
+          </div>
+      </div>
+      <table class="table table-bordered border-warning">
+          <thead>
+              <tr>
+                <th scope="col">Amount</th>
+                <th scope="col">Description</th>
+                <th scope="col">Channel</th>
+                <th scope="col">Date</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">value2</th>
+                <td>value1</td>
+                <td>value12</td>
+                <td>value2</td>
+                <td>value3</td>
+              </tr>
+              <tr>
+                <th scope="row">value4</th>
+                <td>value2</td>
+                <td>value7</td>
+                <td>value19</td>
+                <td>value0</td>
+              </tr>
+              <tr>
+                <th scope="row">value3</th>
+                <td>value5</td>
+                <td>value7</td>
+                <td>value2</td>
+                <td>value7</td>
+              </tr>
+              <tr>
+                  <th scope="row">value2</th>
+                  <td>value1</td>
+                  <td>value12</td>
+                  <td>value2</td>
+                  <td>value3</td>
+                </tr>
+            </tbody>
+      </table>
+      <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+      </nav>
+      </div>
+      <div class="tab-pane fade" id="v-pills-payout" role="tabpanel" aria-labelledby="v-pills-payout-tab">
+        <div class="row">
+          <div class="col-3">
+              <label for="start date">Start date:</label>
+              <input type="date" id="start" name="start date">
+          </div>
+          <div class="col-3">
+              <label for="end date">End date:</label>
+              <input type="date" id="end" name="end date">
+          </div>
+          <div class="col-3">
+              <select class="form-select" aria-label="Default select example">
+                  <option selected>Select Status</option>
+                  <option value="1">Paid</option>
+                  <option value="2">Pending</option>
+                  <option value="3">Recieved</option>
+                  <option value="3">Not Recieved</option>
+                  <option value="3">USSD</option>
+              </select>
+          </div>
+          <div class="col-3">
+              <button type="button" class="btn btn-warning">Download Report</button>
+          </div>
+      </div>
+      <table class="table table-bordered border-warning">
+          <thead>
+              <tr>
+                <th scope="col">Amount</th>
+                <th scope="col">Description</th>
+                <th scope="col">Paid To</th>
+                <th scope="col">Date</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">value2</th>
+                <td>value1</td>
+                <td>value12</td>
+                <td>value2</td>
+                <td>value3</td>
+              </tr>
+              <tr>
+                <th scope="row">value4</th>
+                <td>value2</td>
+                <td>value7</td>
+                <td>value19</td>
+                <td>value0</td>
+              </tr>
+              <tr>
+                <th scope="row">value3</th>
+                <td>value5</td>
+                <td>value7</td>
+                <td>value2</td>
+                <td>value7</td>
+              </tr>
+              <tr>
+                  <th scope="row">value2</th>
+                  <td>value1</td>
+                  <td>value12</td>
+                  <td>value2</td>
+                  <td>value3</td>
+                </tr>
+            </tbody>
+      </table>
+      <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+      </nav>
+      </div>
+      <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+        <div class="alert alert-warning" role="alert">
+          Settings / Personal Information
+      </div>
+      <div class="input-group">
+          <span class="input-group-text">First and last name</span>
+          <input type="text" aria-label="First name" class="form-control">
+          <input type="text" aria-label="Last name" class="form-control">
+        </div>
+        <div class="row">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col input-group mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-default">Password</span>
+              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
+          <div class="col input-group mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-default">Password again</span>
+              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
+        </div>
+        <button type="button" class="btn btn-outline-warning">Save</button>
+
+      </div>
+      <div class="tab-pane fade" id="v-pills-info" role="tabpanel" aria-labelledby="v-pills-info-tab">...</div>
+      <div class="tab-pane fade" id="v-pills-buisness" role="tabpanel" aria-labelledby="v-pills-business-tab">...</div>
+      <div class="tab-pane fade" id="v-pills-setup" role="tabpanel" aria-labelledby="v-pills-setup-tab">...</div>
+
+    </div>
+  </div>
+  
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 
