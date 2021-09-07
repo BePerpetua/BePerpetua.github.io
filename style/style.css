@@ -1,0 +1,39 @@
+.sec1{
+    margin-top:40px;
+}
+
+.topleft{
+    border:1px solid #ffa733;
+    padding:20px;
+    border-radius:16px;
+    margin-right: 20px;
+}
+
+.bottomleft{
+    border:1px solid #ffa733;
+    padding:20px;
+    margin-top:20px;
+    border-radius:16px;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+.right{
+    border:1px solid #ffa733;
+    padding:20px;
+    border-radius:16px;
+    margin-left:20px;
+}
+
+.navbar{
+    padding:20px; 
+    font-size:2rem;
+}
+.vl {
+    border-left: 4px solid #ff9100 ;
+    height: 530px;
+    align-self: center;
+    position:absolute;
+    left: 43.6%;
+   
+}
